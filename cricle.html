@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Circle
+    </title>
+    <style>
+        .container{
+            height: 50px;
+            width:100px;
+            background-color: red;
+
+        }
+    </style>
+    <script type="text/javaScript" src="circle.js"></script>
+</head>
+
+<body>
+    <div onclick="alert('hi')">
+        <ul onclick="alert(event.type + '!')">
+            <li onclick="alert(event.type + '!')">One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <label>Harsh</label>
+        <button onclick="go()">Click me</button>
+    </div>
+    <ul id="parent-list" onclick="x()">
+        <li id="post-1">Item 1</li>
+        <li id="post-2">Item 2</li>
+        <li id="post-3">Item 3</li>
+        <li id="post-4">Item 4</li>
+        <li id="post-5">Item 5</li>
+        <li id="post-6">Item 6</li>
+    </ul>
+    
+</body>
+
+</html>

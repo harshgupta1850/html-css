@@ -1,0 +1,39 @@
+.container-heading{
+    background-color: #eee;
+    height: auto;
+    padding-bottom: 10px;
+}
+.header-heading{
+    text-align: Center;
+    padding-top: 20px;
+}
+
+.image-conatiner{
+    display: block;
+    width: 50%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-caption{
+    text-align: center;
+}
+.principal-container{
+    height: auto;
+    background-color: #eee;
+    text-align: center;
+    margin-top: 10px;
+    padding:10px
+}
+.content{
+}
+.list{
+    list-style: none;
+    margin: auto;
+    width: 40%;
+    
+}
+.footer{
+    text-align: center;
+    padding-top: 20px;
+}

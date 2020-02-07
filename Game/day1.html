@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Game
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+        .car{
+            width: 100px;
+            height: 100px;
+            background:red;
+            position: absolute;
+            left: 50px;
+            bottom: 120px;
+            text-align: center;
+        }
+    </style>
+    <script src="game.js"></script>
+</head>
+
+<body>
+    <div class='car-game'>
+        <div class="score"></div>
+        <div class="startscreen">
+            <p>TO start
+                <br> arrow key to move
+                <br> if u hit the car u will loose
+            </p>
+        </div>
+        <div class="gamearea hide"></div>
+
+    </div>
+    <script>
+        const score = document.querySelector('.score');
+        const startScreen = document.querySelector('.startscreen')
+        const gameArea = document.querySelector('.gamearea')
+        const key={
+            ArrowUp:false,
+            ArrowDown:false,
+            ArrowRight:false,
+            ArrowLeft:false
+        }
+        const player={}
+        console.log(score, startScreen, gameArea)
+        document.addEventListener('keydown',keyDown)
+        document.addEventListener('keyup',keyUp)
+        startScreen.addEventListener('click',start)
+        function keyDown(){
+            event.preventDefault()
+            console.log(event.key)
+            key[event.key]=true
+            console.log(key)
+        }
+        function keyUp(){
+            event.preventDefault()
+            console.log(event.key)
+            key[event.key]=false;
+            console.log(key)
+
+        }
+        function start(){
+            player.start=true;
+            window.requestAnimationFrame(gamePlay)
+            const car = document.createElement('div')
+            car.setAttribute('class','car')
+            car.innerText='Car'
+            gameArea.append(car)
+        }
+        function gamePlay(){
+            console.log('clicked')
+            gameArea.classList.remove('hide')
+            startScreen.classList.add('hide')
+            if(player.start){
+                window.requestAnimationFrame(gamePlay)
+            }
+            
+            
+        }
+
+    </script>
+</body>
+
+</html>

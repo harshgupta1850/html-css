@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Responsive
+    </title>
+    <link rel='stylesheet' type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class='row clearfix'>
+                <img src="image/logo.png" alt="cafe" class="logo">
+                <ul class="main-nav animated zoomIn"  id='check' >
+                    <li>
+                        <a href="#">
+                            cake Delivery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            how to order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Check more
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sign up
+                        </a>
+                    </li>
+                </ul>
+                <a   class="show" onclick="showMenu()"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <h1>
+                Welcome to <span class="animation">cake cafe</span>.<br>
+                House of cake lover
+            </h1>
+            <button class="btn btn-full">
+                <a href='#'>Click to order</a>
+            </button>
+            <button class="btn btn-full">
+                <a href='#'>show more</a>
+            </button>
+        </div>
+        
+    </header>
+    <script>
+        function showMenu(){
+            console.log('clicked')
+            
+            var x=document.querySelector('#check')
+            console.log(x)
+            //debugger;
+            
+            x.classList.remove('main-nav')
+            if(x.style.display==="none"){
+                x.style.display==="block";
+            }else{
+                x.style.display==="none";
+            }
+        }
+    </script>
+</body>
+
+</html>
